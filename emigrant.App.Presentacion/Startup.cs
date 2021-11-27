@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using emigrant.App.Persistencia.AppRepositorios;
 namespace emigrant.App.Presentacion
 {
     public class Startup
@@ -24,8 +25,9 @@ namespace emigrant.App.Presentacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddScoped<IRepositorioEntidadColaboradora, RepositorioEntidadColaboradora>();
+            services.AddSingleton<Persistencia.AppRepositorios.AppContextDb>();
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

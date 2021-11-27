@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cki5gbhoR/2JD7BMWe7jAmhYEvDkI02FHpF9a8dZg2hn7uXVVXdbrT96zkzlC/8YJQc8WKvQWyk1PYacF+ep2A==",
+  "dgSpecHash": "9BPlj7xmTIGkY8N24SocWZkVz556foD2APqfRWNwJ7qSz9WRxQTBeF3bXwBNDSmglpTB0JyJWvM3ZctojuovJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fabio\\Source\\Repos\\e-migrant-grupo20_losfant4sticos\\emigrant.App.Dominio\\emigrant.App.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\gdnie\\OneDrive\\Desktop\\Proyectos\\HackatonMinTic\\emigrant.App\\emigrant.App.Dominio\\emigrant.App.Dominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\fabio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\fabio\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\fabio\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    "C:\\Users\\gdnie\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

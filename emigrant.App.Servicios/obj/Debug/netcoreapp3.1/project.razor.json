@@ -1,0 +1,19 @@
+{
+  "FilePath": "c:\\Users\\andres.rubiano\\OneDrive\\Project\\Data_Hackaton\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "3.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": "emigrant.App.Servicios",
+  "Documents": [],
+  "SerializationFormat": "0.2"
+}
