@@ -1,0 +1,43 @@
+﻿@page
+@model emigrant.App.Frontend.ListaServiciosSolicitudModel
+@{
+}
+
+</style>
+<h1>Servicios Solicitados</h1>
+
+<form method="get">
+    <div class="form-group">
+
+        <p>
+            Identificacion Migrante: <input class="servicioplaceholder" type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+            <input class="btn btn-primary" type="submit" value="Buscar" />
+        </p>
+</form>
+
+<div>
+    <table class="table">
+        <tr>
+            <th scope="col">Id Migrante </th>
+            <th scope="col">Id Servicio </th>
+            <th scope="col">Nombre del Servicio </th>
+            <th scope="col">Id Entidad </th>
+        </tr>
+        @foreach (var servicio in Model.servicios)
+    {
+        <tr>
+            <td>@servicio.MigranteId</td>
+            <td>@servicio.ServicioId</td>
+            <td>@servicio.ServicioNombre</td>
+            <td>@servicio.EntidadId</td>
+
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="/ServiciosSolicitud/FormServiciosSolicitud" asp-route-servicioId="@servicio.ServicioId">
+                    <i class="fas fa-info-circle"> </i> Cancelar
+                </a>
+
+            </td>
+        </tr>
+    }
+    </table>
+    <div>

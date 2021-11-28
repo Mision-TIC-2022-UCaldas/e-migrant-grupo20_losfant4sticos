@@ -1,0 +1,99 @@
+﻿@page
+@model emigrant.App.FrontEnd.Pages.EntidadCol.CrearEntidadModel;
+@{
+    int entidadId = Model.Entidad.Id;
+}
+@if(Model.ValidarEntidad == "Error")
+{
+    <script>
+        alert(["La Entidad Existe en la Base de Datos: @Model.Entidad.Name"]);
+        window.location.href = "https://localhost:5001/EntidadCol/ListEntidad"     
+    </script>
+}
+@if(!string.IsNullOrEmpty(Model.Entidad.Nit) && !string.IsNullOrEmpty(Model.Entidad.Name))
+{
+    <script>
+            alert(["Entidad Actualizada Correctamente: @Model.Entidad.Name"]);          
+    </script>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Entidad Creada!</h4>
+            <p>La Entidad <strong>@Model.Entidad.Name</strong> ha sido creada con exito.</p>
+        <hr>
+        <p class="mb-0">
+            <a href="./ListEntidad" class="btn btn-primary">Volver</a>
+        </p>
+    </div>
+}
+<h4 class="mb-3">Datos Entidades @Model.Entidad.Nit @Model.Entidad.Name</h4>
+
+<form method="post"class="needs-validation" novalidate>
+<div class="row g-3">
+    <div class="form-group row">
+        <input type="hidden" asp-for="Entidad.Id" />
+        <div class="col-sm-6">
+            <label asp-for="Entidad.Nit" class="form-label" ></label>
+            <input asp-for="Entidad.Nit" class="form-control">
+            <span class="text-danger" asp-validation-for="Entidad.Nit"></span>
+        </div>
+        <div class="invalid-feedback">
+            El Campo es Requerido.
+        </div>
+    
+        <div class="col-sm-6">
+            <label asp-for="Entidad.Name" class="form-label">Razon Social</label>
+            <input asp-for="Entidad.Name" class="form-control">
+            <span class="text-danger" asp-validation-for="Entidad.Name"></span>
+        <div class="invalid-feedback">
+            El Campo es Requerido.
+        </div>
+    </div>
+    </div>
+
+    <div class="form-group row">
+    <div class="col-sm-6">
+        <label asp-for="Entidad.Direccion"></label>
+        <input asp-for="Entidad.Direccion" class="form-control">
+        <span class="text-danger" asp-validation-for="Entidad.Direccion"></span>
+    </div>
+    <div class="col-sm-6">
+        <label asp-for="Entidad.Telefono"></label>
+        <input asp-for="Entidad.Telefono" class="form-control">
+        <span class="text-danger" asp-validation-for="Entidad.Telefono"></span>
+    </div>
+    </div>
+
+    <div class="form-group row">
+    <div class="col-sm-6">
+        <label asp-for="Entidad.Ciudad"></label>
+        <select class="form-select" name="Entidad.Ciudad">
+            <option value=1>Cali</option>
+            <option value=2>Bogota</option>
+        </select>
+        <span class="text-danger" asp-validation-for="Entidad.Ciudad"></span>
+    </div> 
+    <div class="col-sm-6">
+        <label>Departamento</label>
+        <select class="form-select" name="Entidad.Departamento">
+            <option value=1>Cundinamarca</option>
+            <option value=2>Valle del Cauca</option>
+        </select>
+        <span class="text-danger" asp-validation-for="Entidad.Departamento"></span>
+    </div>
+    </div>
+    <div class="form-group row">
+    <div class="col-sm-6">
+        <label asp-for="Entidad.Pais"></label>
+        <select class="form-select" name="Entidad.Pais">
+            <option value=1>Colombia</option>
+        </select>
+        <span class="text-danger" asp-validation-for="Entidad.Pais"></span>
+    </div>
+    </div>
+    <div class="form-group row">
+    <div class="col-sm-6">
+        <button type="submit" class="btn btn-success" id="NuevaEntidad" >Guardar</button>
+        <button type="submit" class="btn btn-danger" asp-page="./ListEntidad">Cancelar</button>
+    </div>
+    </div>
+</div>
+</form>

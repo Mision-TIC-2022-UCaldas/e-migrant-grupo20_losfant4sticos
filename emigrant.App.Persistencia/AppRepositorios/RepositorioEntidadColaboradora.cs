@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using emigrant.App.Dominio;
 
-namespace emigrant.App.Persistencia.AppRepositorios
+namespace emigrant.App.Persistencia
 {
     public class RepositorioEntidadColaboradora : IRepositorioEntidadColaboradora
     {
-        // Instanciamos el objecto de la clase AppContext
+        // Instanciamos el objecto de la clase AppContextDb
         private readonly AppContextDb _appContext;
         public IEnumerable<EntidadColaboradora> EntidadColaboradora { get; set; }
 
@@ -36,7 +36,7 @@ namespace emigrant.App.Persistencia.AppRepositorios
         {
             if (entidad != null)
             {
-                return _appContext.EntidadColaboradora.Where(p => p.Name.Contains(entidad)); //like sobre la tabla
+                return _appContext.EntidadColaboradora.Where(p => p.Nit.Contains(entidad)); //like sobre la tabla
             }
                 return _appContext.EntidadColaboradora;  //select * from EntidadColaboradoras
         }

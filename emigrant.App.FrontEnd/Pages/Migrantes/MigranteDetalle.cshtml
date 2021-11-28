@@ -1,0 +1,155 @@
+﻿@page
+@model emigrant.App.FrontEnd.Pages.Migrantes.MigranteDetalleModel
+@{
+}
+@if (Model.ValidarEntidad == "Error")
+{
+<script>
+        alert(["La Migrante no Existe en la Base de Datos]);
+        
+</script>}
+<section class="Form">
+    <h2>Edición Propietario :@Model.Migrante.Nombre</h2>
+    <form method="post">
+        <input type="hidden" asp-for="Migrante.MigranteId" />
+        <div class="form-group">
+            <label asp-for="Migrante.Nombre"></label>
+            <input asp-for="Migrante.Nombre" class="form-control">
+            <span class="text-danger" asp-validation-for="Migrante.Nombre"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Migrante.Apellidos"></label>
+            <input asp-for="Migrante.Apellidos" class="form-control">
+            <span class="text-danger" asp-validation-for="Migrante.Apellidos"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Migrante.DireccionActual"></label>
+            <input asp-for="Migrante.DireccionActual" class="form-control">
+            <span class="text-danger" asp-validation-for="Migrante.DireccionActual"></span>
+        </div>
+        @*<div class="col-sm">
+            <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+            <select class="form-select" value="Migrante.TipoDocumento" name="TipoDocumento">
+                <option value="Pasaporte">Pasaporte</option>
+                <option value="Visa">Visa</option>
+            </select>
+        </div>*@
+        <div class="form-group">
+            <label asp-for="Migrante.TipoDocumento">Categoria</label>
+            <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+            <select class="form-select" id="Migrante.TipoDocumento" name="Migrante.TipoDocumento">
+                <option value="@Model.Migrante.TipoDocumento" color="#9f8ad0">@Model.Migrante.TipoDocumento</option>
+                <option value="Pasaporte">Pasaporte</option>
+                <option value="Visa">Visa</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="Migrante.NumeroDocumento"></label>
+            <input asp-for="Migrante.NumeroDocumento" class="form-control">
+            <span class="text-danger" asp-validation-for="Migrante.NumeroDocumento"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Migrante.DireccionActual"></label>
+            <input asp-for="Migrante.DireccionActual" class="form-control">
+            <span class="text-danger" asp-validation-for="Migrante.DireccionActual"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Migrante.NumeroTelefono"></label>
+            <input asp-for="Migrante.NumeroTelefono" class="form-control">
+            <span class="text-danger" asp-validation-for="Migrante.NumeroTelefono"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Migrante.FechaNacimiento"></label>
+            <input asp-for="Migrante.FechaNacimiento" class="form-control" type="date">
+            <span class="text-danger" asp-validation-for="Migrante.FechaNacimiento"></span>
+        </div>
+        <div class="col-sm">
+            <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+            <select class="form-select" name="PaisOrigen">
+                <option value="@Model.Migrante.PaisOrigen" color="#9f8ad0">@Model.Migrante.PaisOrigen</option>
+                <option value="0" color="#9f8ad0">Argentina</option>
+                <option value="1">Venezuela</option>
+
+            </select>
+            <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+            <select class="form-select" id="TipoDocumento" name="CiudadResidencia">
+                <option value="@Model.Migrante.CiudadResidencia" color="#9f8ad0">@Model.Migrante.CiudadResidencia</option>
+                <option value="0" color="#9f8ad0">Valledupar</option>
+                <option value="1">Medellin</option>
+                <option value="2">Bogota</option>
+
+            </select>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" asp-for="Migrante.SituacionLaboral" id="flexCheckIndeterminate">
+            <label class="form-check-label" for="flexCheckIndeterminate">
+                SituacionLaboral
+            </label>
+        </div>
+        <div>
+            <br />
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </div>
+        <a class="btn btn-primary table-btn" asp-page="MigranteAsignarFamiliar" asp-route-migranteId="@Model.Migrante.MigranteId">
+            <i class="fal fa-address-card">Familiar Y Amigos</i>
+        </a>
+    </form>
+
+
+</section>
+
+<div id="mainContainer">
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <form class="d-flex" method="post">
+                <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="migranteBuscar">
+                <input type="hidden" asp-for="Migrante.MigranteId" />
+                <button class="btn btn-primary " type="submit" asp-page-handler="Buscar">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Indentificacion</th>
+                <th>Telefono</th>
+                <th>Situacion Laboral</th>
+                <th>Borrar</th>
+                
+
+
+            </tr>
+        </thead>
+        @if (Model.MigranteInterar != null)
+        {
+            foreach (var propietario in Model.MigranteInterar)
+
+            {
+                <tr>
+                    <td>@propietario.Nombre.</td>
+                    <td>@propietario.Apellidos</td>
+
+                    <td>@propietario.DireccionActual</td>
+                    <td>@propietario.CiudadResidencia</td>
+                    <td>
+                        @propietario.NumeroTelefono
+                    </td>
+                    <td>@propietario.SituacionLaboral</td>
+
+                    <td>
+                        <form method="post">
+                            <input type="hidden" asp-for="Migrante.MigranteId" name="migranteId" />
+                            <input type="submit" class="btn btn-outline-dark btn-lg" value="Borrar" asp-page-handler="Delete" asp-route-famAmigId="@propietario.MigranteId">
+                        </form>
+                    </td>
+
+
+                </tr>
+            }
+        }
+    </table>
+</div>

@@ -1,8 +1,13 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\andres.rubiano\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\andres.rubiano\\.nuget\\packages"
+<<<<<<< HEAD
+      "C:\\Users\\gdnie\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gdnie\\.nuget\\packages"
+=======
+      "C:\\Users\\fabio\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\fabio\\.nuget\\packages"
+>>>>>>> FabioMaestreVersiones
     ]
   }
 }

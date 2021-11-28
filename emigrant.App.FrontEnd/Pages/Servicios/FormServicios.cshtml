@@ -1,0 +1,124 @@
+﻿@page
+@model emigrant.App.Frontend.FormServiciosModel
+@{
+}
+<h1>Adicionar Servicios</h1>
+
+
+    
+        <div class="card-header bg-info text-center card-body align-content-center" style=" width: 25rem;">
+
+            <form method="post">
+                <input type="hidden" asp-for="Servicio.ServicioId" />
+
+                @* <div class="form-group">
+        <label asp-for="Servicio.ServicioId">Id Servicio</label>
+        <input asp-for="Servicio.ServicioId" class="form-control" disabled>
+        <span class="text-danger" asp-validation-for="Servicio.ServicioId"></span>
+        </div> *@
+
+                <div class="mb-3">
+                    <label asp-for="Servicio.EntidadId">NIT Entidad</label>
+                    <input asp-for="Servicio.EntidadId" class="form-control">
+                    <span class="text-danger" asp-validation-for="Servicio.EntidadId"></span>
+                </div>
+
+                @* <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Id de la Entidad</span>
+        <input type="text" asp-for="Servicio.EntidadId" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-sm">
+        </div> *@
+
+                @* <div class="form-group">
+        <label asp-for="Servicio.ServicioId">ID Servicio--solo temporal</label>
+        <input asp-for="Servicio.ServicioId" class="form-control">
+        <span class="text-danger" asp-validation-for="Servicio.ServicioId"></span>
+        </div> *@
+
+
+                <div class="form-group">
+                    <label asp-for="Servicio.Nombre">Nombre Servicio</label>
+                    <input asp-for="Servicio.Nombre" class="form-control">
+                    <span class="text-danger" asp-validation-for="Servicio.Nombre"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Servicio.Categoria">Categoria</label>
+                    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                    <select class="form-select" id="Servicio.Categoria" name="Servicio.Categoria">
+                        <option value="@Model.Servicio.Categoria" color="#9f8ad0">@Model.Servicio.Categoria</option>
+                        <option value="Jurídicos" color="#9f8ad0">Jurídicos</option>
+                        <option value="Víveres">Víveres</option>
+                        <option value="Comida preparada">Comida preparada</option>
+                        <option value="Empleo">Empleo</option>
+                        <option value="Alojamiento temporal">Alojamiento temporal</option>
+                        <option value="Alojamiento permanente">Alojamiento permanente</option>
+                        <option value="Educación">Educación</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Servicio.MaximoMigrantes">Máximo Número Migrantes</label>
+                    <input asp-for="Servicio.MaximoMigrantes" class="form-control">
+                    <span class="text-danger" asp-validation-for="Servicio.MaximoMigrantes"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Servicio.FechaInicio">Fecha Inicio</label>
+                    <input asp-for="Servicio.FechaInicio" class="form-control">
+                    <span class="text-danger" asp-validation-for="Servicio.FechaInicio"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Servicio.FechaFinal">Fecha Final</label>
+                    <input asp-for="Servicio.FechaFinal" class="form-control" id=fechafinal>
+                    <span class="text-danger" asp-validation-for="Servicio.FechaFinal"></span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label asp-for="Servicio.EstadoServicio">Estado Servicio</label>
+                    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                    <select class="form-select" id="Servicio.EstadoServicio" name="Servicio.EstadoServicio">
+                        <option value="@Model.Servicio.EstadoServicio" color="#9f8ad0">@Model.Servicio.EstadoServicio</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Cerrado">Cerrado</option>
+                        <option value="Con cupo">Con cupo</option>
+                        <option value="Sin cupo">Sin cupo</option>
+                    </select>
+                </div>
+
+                @if (Model.Servicio == null)
+                {
+                                <script>
+                    alert(["fecha posterior debe ser mayor a la inicial"]);
+                    window.location.href = "https://localhost:5001/EntidadCol/ListEntidad"
+                                </script>
+                }
+
+                {
+                <button type="submit" id="aceptar" class="btn btn-primary" asp-page="/FormServicios">Aceptar</button>
+                }
+
+                @* <button type="submit" id="aceptar" class="btn btn-primary" asp-page="/FormServicios" >Aceptar</button> *@
+
+                @* @if ((Model.Servicio.ServicioId) != 0)
+        {
+        <script>alert("Guardado con exito");</script>
+
+        } *@
+
+                <a class="btn btn-primary table-btn" asp-page="./ListaServiciosEntidad"
+                   asp-route-EntidadId="@Model.Servicio.EntidadId">
+                    <i class="fas fa-info-circle"> </i> Lista de servicios Entidad
+                </a>
+
+            </form>
+        </div>
+    </div>
+
+ 
+<h2>.</h2>

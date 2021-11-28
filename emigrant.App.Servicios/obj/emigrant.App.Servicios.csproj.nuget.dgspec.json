@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andres.rubiano\\OneDrive\\Project\\Data_Hackaton\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj": {}
+    "C:\\Users\\gdnie\\OneDrive\\Desktop\\Proyectos\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andres.rubiano\\OneDrive\\Project\\Data_Hackaton\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj": {
+    "C:\\Users\\gdnie\\OneDrive\\Desktop\\Proyectos\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andres.rubiano\\OneDrive\\Project\\Data_Hackaton\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj",
+        "projectUniqueName": "C:\\Users\\gdnie\\OneDrive\\Desktop\\Proyectos\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj",
         "projectName": "emigrant.App.Servicios",
-        "projectPath": "C:\\Users\\andres.rubiano\\OneDrive\\Project\\Data_Hackaton\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj",
-        "packagesPath": "C:\\Users\\andres.rubiano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andres.rubiano\\OneDrive\\Project\\Data_Hackaton\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\obj\\",
+        "projectPath": "C:\\Users\\gdnie\\OneDrive\\Desktop\\Proyectos\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\emigrant.App.Servicios.csproj",
+        "packagesPath": "C:\\Users\\gdnie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gdnie\\OneDrive\\Desktop\\Proyectos\\HackatonMinTic\\emigrant.App\\emigrant.App.Servicios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andres.rubiano\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\gdnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\andres.rubiano\\AppData\\Local\\Programs\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

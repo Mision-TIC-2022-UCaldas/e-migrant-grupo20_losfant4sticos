@@ -1,0 +1,24 @@
+@page
+@model emigrant.App.FrontEnd.Pages.EntidadCol.DeleteEntidadModel;
+@{
+    int entidadId = Model.Entidad.Id;
+}
+<h2>Eliminar los datos de la Entidad @Model.Entidad.Name @Model.Entidad.Nit</h2>
+<form method="post">
+    <input type="hidden" asp-for="Entidad.Id" />    
+    
+    <div class="form-group">
+        <label asp-for="Entidad.Nit"></label>
+        <input asp-for="Entidad.Nit" class="form-control" disabled>
+        <span class="text-danger" asp-validation-for="Entidad.Nit"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Entidad.Name"></label>
+        <input asp-for="Entidad.Name" class="form-control" disabled>
+        <span class="text-danger" asp-validation-for="Entidad.Name"></span>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Eliminar</button>    
+</form>
+
+<a asp-page="./ListEntidad" class="btn-default">Regresar</a>

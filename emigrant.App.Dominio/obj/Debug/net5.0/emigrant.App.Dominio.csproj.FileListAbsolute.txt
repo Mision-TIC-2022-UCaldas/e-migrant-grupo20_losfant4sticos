@@ -10,6 +10,32 @@ C:\Users\andres.rubiano\OneDrive\Project\Data_Hackaton\HackatonMinTic\emigrant.A
 C:\Users\andres.rubiano\OneDrive\Project\Data_Hackaton\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.dll
 C:\Users\andres.rubiano\OneDrive\Project\Data_Hackaton\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\ref\emigrant.App.Dominio.dll
 C:\Users\andres.rubiano\OneDrive\Project\Data_Hackaton\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.pdb
+<<<<<<< HEAD
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.deps.json
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.dll
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\ref\emigrant.App.Dominio.dll
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.pdb
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.csproj.AssemblyReference.cache
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.AssemblyInfoInputs.cache
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.AssemblyInfo.cs
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.dll
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\ref\emigrant.App.Dominio.dll
+C:\Hackaton\emigrant.app\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.pdb
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.deps.json
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.dll
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\ref\emigrant.App.Dominio.dll
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.pdb
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.csproj.AssemblyReference.cache
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.AssemblyInfoInputs.cache
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.AssemblyInfo.cs
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.csproj.CoreCompileInputs.cache
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.dll
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\ref\emigrant.App.Dominio.dll
+D:\Users\KACEGO9\Desktop\Hackaton\HackatonMinTic-1\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.pdb
+=======
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.deps.json
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.dll
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\ref\emigrant.App.Dominio.dll
@@ -22,3 +48,17 @@ C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.A
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.dll
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\ref\emigrant.App.Dominio.dll
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.pdb
+>>>>>>> entidadColaboradora
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.deps.json
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.dll
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\ref\emigrant.App.Dominio.dll
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\bin\Debug\net5.0\emigrant.App.Dominio.pdb
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.csproj.AssemblyReference.cache
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.AssemblyInfoInputs.cache
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.AssemblyInfo.cs
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.csproj.CoreCompileInputs.cache
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.dll
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\ref\emigrant.App.Dominio.dll
+D:\Users\KACEGO9\Desktop\back-up\HackatonMinTic\emigrant.App\emigrant.App.Dominio\obj\Debug\net5.0\emigrant.App.Dominio.pdb
+>>>>>>> cambios-en-servicio

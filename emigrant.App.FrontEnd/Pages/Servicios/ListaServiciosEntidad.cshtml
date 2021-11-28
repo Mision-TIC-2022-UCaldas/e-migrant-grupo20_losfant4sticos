@@ -1,0 +1,59 @@
+﻿@page
+@model emigrant.App.Frontend.ListaServiciosEntidadModel
+@{
+
+}
+<style type="text/css">
+    h1 {
+        color: blueviolet
+    }
+</style>
+
+<h1>Listado de servicios ofrecidos</h1>
+<h1>NIT Empresa</h1>
+
+@* <form method="post">
+    <div class="form-group">
+
+    <p>
+    NIT Entidad: <input class="servicioplaceholder" type="text" name="filtroBusqueda"
+    asp-for="FiltroBusqueda" />
+    <input class="btn btn-primary" type="submit" value="Buscar" />
+    </p>
+    </form> *@
+
+<a asp-page=".\FormServicios" class="btn btn-primary">Agregar Servicio</a>
+@* <a asp-page=".\Index" class="btn btn-primary">Inicio</a> *@
+
+<div>
+    <table class="table">
+        <tr>
+            <th scope="col">ID Entidad </th>
+            <th scope="col">Estado  </th>
+            <th scope="col">Nombre Servicio </th>
+            <th scope="col">Categoria </th>
+            <th scope="col">Fecha cierre </th>
+
+        </tr>
+        @foreach (var servicio in Model.servicios)
+        {
+            <tr>
+                <td>@servicio.EntidadId</td>
+                <td>@servicio.EstadoServicio</td>
+                <td>@servicio.Nombre</td>
+                <td>@servicio.Categoria</td>
+                <td>@servicio.FechaFinal</td>
+
+
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./FormServicios"
+                    asp-route-servicioId="@servicio.ServicioId">
+                        <i class="fas fa-info-circle"> </i> Editar
+                    </a>
+
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div>

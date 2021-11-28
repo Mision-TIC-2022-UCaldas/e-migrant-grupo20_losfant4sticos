@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 using emigrant.App.Dominio;
 
-namespace emigrant.App.Persistencia.AppRepositorios
+namespace emigrant.App.Persistencia
 {
     public interface IRepositorioEntidadColaboradora
     {
