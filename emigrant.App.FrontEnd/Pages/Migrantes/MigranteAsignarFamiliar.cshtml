@@ -1,0 +1,62 @@
+﻿@page
+@model emigrant.App.FrontEnd.Pages.Migrantes.MigranteAsignarFamiliar
+@{
+}
+
+<div id="mainContainer">
+   
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <form class="d-flex" method="post">
+                <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="migranteBuscar">
+                <input type="hidden" asp-for="Migrante.MigranteId" name="migranteId" />
+                <button class="btn btn-primary " type="submit" asp-page-handler="Buscar">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Indentificacion</th>
+                <th>Telefono</th>
+                <th>Situacion Laboral</th>
+
+                <th>Agregar Familiar o Amigos</th>
+
+            </tr>
+        </thead>
+        @if (Model.Migrantes != null)
+        {
+            foreach (var propietario in Model.Migrantes)
+
+            {
+                <tr>
+                    <td>@propietario.Nombre</td>
+                    <td>@propietario.Apellidos</td>
+
+                    <td>@propietario.DireccionActual</td>
+                    <td>@propietario.NumeroDocumento</td>
+                    <td>
+                        @propietario.NumeroTelefono
+                    </td>
+                    <td>@propietario.SituacionLaboral</td>
+
+                    <td>
+                        <form class="d-flex" method="post">
+                            <input type="hidden" name="AmigoFamiliarId" value="@propietario.MigranteId" />
+                            <input type="hidden" asp-for="Migrante.MigranteId" name="migranteId" />
+                            <button class="btn btn-primary " type="submit" asp-page-handler="AniadirFamAmg">Añadir</button>
+
+                        </form>
+                    </td>
+
+                </tr>
+            }
+        }
+    </table>
+</div>
+
+ 

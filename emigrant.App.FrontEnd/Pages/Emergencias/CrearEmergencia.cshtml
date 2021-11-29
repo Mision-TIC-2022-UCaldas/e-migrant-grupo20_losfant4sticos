@@ -1,0 +1,95 @@
+﻿@page
+@model emigrant.App.FrontEnd.Pages.CrearEmergenciaModel;
+@{
+    int emergenciaId = Model.Emergencia.Id;
+}
+@if(Model.ValidarEmergencia == "Error")
+{
+    <script>
+        alert(["La Emergencia Existe en la Base de Datos"]);
+        window.location.href = "https://localhost:5001/EntidadCol/ListEntidad"     
+    </script>
+}
+@if(!string.IsNullOrEmpty(Model.Emergencia.NumeroDocumetoMigrante) && !string.IsNullOrEmpty(Model.Emergencia.NombreMigrante) && !string.IsNullOrEmpty(Model.Emergencia.Observacion))
+{
+    <script>
+            alert(["Emergencia Actualizada Correctamente: @Model.Emergencia.NumeroDocumetoMigrante"]);          
+    </script>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Emergencia Creada!</h4>
+            <p>La Emergencia <strong>@Model.Emergencia.NumeroDocumetoMigrante</strong> ha sido creada con exito.</p>
+        <hr>
+        <p class="mb-0">
+            <a href="./ListEmergencia" class="btn btn-primary">Volver</a>
+        </p>
+    </div>
+}
+<h4 class="mb-3">Datos Emergencia @Model.Emergencia.NumeroDocumetoMigrante @Model.Emergencia.NombreMigrante</h4>
+
+<form method="post"class="needs-validation" novalidate>
+<div class="row g-3">
+    <div class="form-group row">
+        <input type="hidden" asp-for="Emergencia.Id" />
+        <div class="col-sm-6 ">
+            <label asp-for="Emergencia.NumeroDocumetoMigrante" class="form-label" >N° Documento</label>
+            <input asp-for="Emergencia.NumeroDocumetoMigrante" class="form-control" required>
+            <div class="invalid-feedback">
+                El Campo es Requerido.
+            </div>
+            <span class="text-danger" asp-validation-for="Emergencia.NumeroDocumetoMigrante"></span>
+        </div>
+    
+        <div class="col-sm-6">
+            <label asp-for="Emergencia.NombreMigrante" class="form-label">Nombre y Apellidos</label>
+            <input asp-for="Emergencia.NombreMigrante" class="form-control">
+            <span class="text-danger" asp-validation-for="Emergencia.NombreMigrante"></span>
+        <div class="invalid-feedback">
+            El Campo es Requerido.
+        </div>
+    </div>
+    </div>
+
+    <div class="form-group row">
+    <div class="col-sm-6">
+        <label asp-for="Emergencia.FechaEmergencia"></label>
+        <input asp-for="Emergencia.FechaEmergencia" class="form-control" >
+        <span class="text-danger" asp-validation-for="Emergencia.FechaEmergencia"></span>
+    </div>
+    <div class="col-sm-6">
+        <label asp-for="Emergencia.Estado"></label>
+        <select class="form-select" name="Emergencia.Estado">
+            <option value="@Model.Emergencia.Estado" color="#9f8ad0">@Model.Emergencia.Estado</option>
+            <option value="Policial">Policial</option>
+            <option value="Salud">Salud</option>
+        </select>
+        <span class="text-danger" asp-validation-for="Emergencia.Estado"></span>
+    </div>
+    <div class="col-sm-6">
+        <label asp-for="Emergencia.TipoEmergencia"></label>
+        <select class="form-select" name="Emergencia.TipoEmergencia">
+            <option value="@Model.Emergencia.TipoEmergencia" color="#9f8ad0">@Model.Emergencia.TipoEmergencia</option>
+            <option value="Activa">Activa</option>
+            <option value="Cancelada">Cancelada</option>
+            <option value="Atendida">Atendida</option>
+        </select>
+        <span class="text-danger" asp-validation-for="Emergencia.TipoEmergencia"></span>
+    </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-12">
+        <label asp-for="Emergencia.Observacion"></label>
+        <textarea asp-for="Emergencia.Observacion" class="form-control" rows="3"></textarea>
+        <span class="text-danger" asp-validation-for="Emergencia.Observacion"></span>
+    </div>
+    </div>
+    <div class="form-group row">
+    </div>
+    <div class="form-group row">
+    <div class="col-sm-6">
+        <button type="submit" class="btn btn-success" id="NuevaEntidad" >Guardar</button>
+        <a asp-page="./ListEmergencia" class="btn-default">Regresar</a>
+    </div>
+    </div>
+</div>
+</form>

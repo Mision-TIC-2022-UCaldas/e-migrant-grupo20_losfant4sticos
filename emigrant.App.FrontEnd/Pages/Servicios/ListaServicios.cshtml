@@ -1,0 +1,71 @@
+﻿@page
+@model emigrant.App.Frontend.ListaServiciosModel
+@{
+}
+<style type="text/css">
+    h1 {
+        color: blueviolet
+    }
+</style>
+<h1>Servicios Ofrecidos</h1>
+
+<form method="get">
+    <div class="form-group">
+
+        <p>
+            Nombre servicio o Categoria: <input class="servicioplaceholder" type="text" name="filtroBusqueda"
+                asp-for="FiltroBusqueda" />
+            <input class="btn btn-primary" type="submit" value="Buscar" />
+        </p>
+</form>
+
+<a asp-page=".\Index" class="btn btn-primary">Inicio</a>
+
+<div>
+    <table class="table">
+        <tr>
+            <th scope="col">ID </th>
+            <th scope="col">Nombre </th>
+            <th scope="col">Categoria </th>
+            <th scope="col">Fecha cierre </th>
+            <th scope="col">Entidad Id</th>
+            <th scope="col">Estado</th>
+
+
+        </tr>
+        @foreach (var servicio in Model.servicios)
+        {
+    <tr>
+        <td>@servicio.ServicioId</td>
+        <td>@servicio.Nombre</td>
+        <td>@servicio.Categoria</td>
+        <td>@servicio.FechaFinal</td>
+        <td>@servicio.EntidadId</td>
+        <th>@servicio.EstadoServicio</th>
+
+        @if (@servicio.EstadoServicio == "Cerrado" || @servicio.EstadoServicio == "Sin cupo" )
+
+        {
+            <td>
+                <a class="btn btn-secondary table-btn" asp-page=" "
+                   asp-route-servicioId="@servicio.ServicioId">
+                    <i class="fas fa-info-circle"> </i> Solicitar
+                </a>
+
+            </td>
+        }
+        else
+        {
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="/ServiciosSolicitud/FormServiciosSolicitud"
+                   asp-route-servicioId="@servicio.ServicioId">
+                    <i class="fas fa-info-circle"> </i> Solicitar
+                </a>
+
+            </td>
+
+        }
+    </tr>
+        }
+    </table>
+    <div>

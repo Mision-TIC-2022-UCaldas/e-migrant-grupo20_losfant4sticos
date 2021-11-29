@@ -1,0 +1,17 @@
+@page
+@model emigrant.App.FrontEnd.Pages.EntidadCol.DetailEntidadModel;
+@{
+}
+
+<h2>Datos Detallados de la Entidad @Model.Entidad.Nit @Model.Entidad.Name</h2>
+<div>
+    ID: @Model.Entidad.Id
+</div>
+<div>
+    NIT: @Model.Entidad.Nit
+</div>
+<div>
+    NOMBRES: @Model.Entidad.Name
+</div>
+
+<a asp-page="./ListEntidad" class="btn btn-default">Regresar</a>

@@ -1,0 +1,34 @@
+@page
+@model emigrant.App.FrontEnd.Pages.DeleteEmergenciaModel;
+@{
+    int emergenciaId = Model.Emergencia.Id;
+}
+<h2>Eliminar los datos Emergencia @Model.Emergencia.NombreMigrante @Model.Emergencia.Estado</h2>
+<form method="post">
+    <input type="hidden" asp-for="Emergencia.Id" />    
+    
+    <div class="form-group">
+        <label asp-for="Emergencia.NombreMigrante"></label>
+        <input asp-for="Emergencia.NombreMigrante" class="form-control" disabled>
+        <span class="text-danger" asp-validation-for="Emergencia.NombreMigrante"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Emergencia.Observacion"></label>
+        <input asp-for="Emergencia.Observacion" class="form-control" disabled>
+        <span class="text-danger" asp-validation-for="Emergencia.Observacion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Emergencia.Estado"></label>
+        <input asp-for="Emergencia.Estado" class="form-control" disabled>
+        <span class="text-danger" asp-validation-for="Emergencia.Estado"></span>
+    </div>
+        <div class="form-group">
+        <label asp-for="Emergencia.TipoEmergencia"></label>
+        <input asp-for="Emergencia.TipoEmergencia" class="form-control" disabled>
+        <span class="text-danger" asp-validation-for="Emergencia.TipoEmergencia"></span>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Eliminar</button> 
+</form>
+<a asp-page="./ListEmergencia" class="btn-default">Regresar</a>
+

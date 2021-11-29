@@ -1,0 +1,102 @@
+﻿@page
+@model emigrant.App.FrontEnd.Pages.Migrantes.MigranteFormRegistro
+@{
+}
+@if (Model.ValidarEntidad == "Error")
+{
+<script>
+        alert(["El documento  Existe en la Base de Datos"]);
+</script>}
+<form method="post">
+    <section class="Form">
+        <h1 class="text-center">Registro</h1>
+        <input type="hidden" name="Activo" value="True" />
+        <div class="row g-2 mb-3">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid"
+                           name="Nombre" required>
+                    <label for="floatingInputGrid">Nombre</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid"
+                           name="Apellidos" required>
+                    <label for="floatingInputGrid">Apellidos</label>
+                </div>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <div class="col-sm">
+                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                <select class="form-select" id="TipoDocumento" name="TipoDocumento" required>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Visa">Visa</option>
+                </select>
+            </div>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" aria-label="Text input with dropdown button" name="NumeroDocumento" required>
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="DirrecionElectronica" required>
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="row g-2 mb-3">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="calla falsa 123"
+                           name="DireccionActual" required>
+                    <label for="floatingInputGrid">Direccion Actual</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="floatingInputGrid" placeholder=""
+                           name="NumeroTelefono">
+                    <label for="floatingInputGrid">Telefono</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="date" class="form-control" id="floatingInputGrid" placeholder="DD/MM/YYYY"
+                           name="FechaNacimiento">
+                    <label for="floatingInputGrid">Fecha Nacimiento</label>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="col-sm">
+                    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                    <select class="form-select" id="TipoDocumento" name="PaisOrigen">
+                        <option selected>PaisOrigen</option>
+                        <option value="0" color="#9f8ad0">Argentina</option>
+                        <option value="0">Venezuela</option>
+
+                    </select>
+                    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                    <select class="form-select" id="TipoDocumento" name="CiudadResidencia">
+                        <option selected>Ciudad de Residencia</option>
+                        <option value="0" color="#9f8ad0">Valledupar</option>
+                        <option value="1">Medellin</option>
+                        <option value="2">Bogota</option>
+
+                    </select>
+                </div>
+
+            </div>
+            <div class="bootstrap-switch-square">
+                <input type="checkbox" data-toggle="switch" name="SituacionLaboral" id="Resend" value="true" />
+                <label for="floatingInputGrid">Trabajando Actualmente</label>
+            </div>
+
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary btn-lg" value="Registrar" asp-page-handler="Registrar">
+        </div>
+    </section>
+</form>

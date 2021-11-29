@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a href="Migrantes/MigranteForm"<p>Migrantes</p></a>
+    <a href="Entidad/FormEntidad"<p>Entidades Colaboradoras</p></a>
+    <a href="Entidad/ListaEntidad"<p>Entidades Colaboradoras</p></a>
+    <a href="Servicios/ServiciosForm"<p>Servicios ofrecidos Entidades Colaboradoras</p></a>
+    <a href="Servicios/FormServicios"<p>Adicionar Servicios ofrecidos Entidades Colaboradoras</p></a>
+    <a href="Servicios/ListaServicios"<p>Servicios ofrecidos</p></a>
+    <a href="ServiciosSolicitud/ListaServiciosSolicitud"<p>Servicios solicitados</p></a>
+    <a href="ServiciosAsignacion/ListaServiciosAsignacion"<p>Servicios Asignados</p></a>
+    <a href="ServiciosEnUso/ListaServiciosEnUso"<p>Servicios En Uso</p></a>
+</div>
+    <a href="Migrantes/MigranteFormRegistro"<p>Migrantes Registro</p></a>
+    <a href="Migrantes/MigranteFormTablas"<p>Migrantes Buscar</p></a>
+   
+    <form method="get">
+
+        <div class="input-group mb-2">
+            <div class="form-floating">
+                <input type="number" class="form-control" id="floatingInputGrid"
+                       name="numeroDocumento">
+                <label for="floatingInputGrid">Consultar Informacion</label>
+            </div>
+            <button type="submit"  asp-page="Migrantes/MigranteDetalle"  >Buscar</button>
+        </div>
+
+        
+
+    </form>
+</div>

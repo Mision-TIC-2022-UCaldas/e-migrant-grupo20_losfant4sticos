@@ -1,0 +1,21 @@
+@page
+@model emigrant.App.FrontEnd.Pages.DetailEmergenciaModel;
+@{
+}
+
+<h2>Datos Detallados de la Entidad @Model.Emergencia.NumeroDocumetoMigrante @Model.Emergencia.NombreMigrante</h2>
+<div>
+    Estado: @Model.Emergencia.Id
+</div>
+<div>
+    Estado: @Model.Emergencia.Estado
+</div>
+<div>
+    Nombre Inmigrante: @Model.Emergencia.NombreMigrante
+</div>
+<div>
+    Tipo Solicitud: @Model.Emergencia.TipoEmergencia
+</div>
+
+
+<a class="btn btn-danger table-btn" asp-page="./ListEmergencia" class="btn btn-default">Regresar</a>

@@ -1,0 +1,51 @@
+@page
+@model emigrant.App.FrontEnd.Pages.EntidadCol.ListEntidadModel;
+
+@{
+   var BuscarEntidad = Model.BuscarEntidad; 
+}
+
+<h1>Listado de Entidades de Atencion</h1>
+<p>
+    
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar x Nombre: @Html.TextBox("BuscarEntidad") 
+        <a asp-page="./List" class="btn btn-danger table-btn">X</a>
+        <input class="btn btn-primary table-btn"type="submit" value="Search" />
+        <a asp-page=".\CrearEntidad" class="btn btn-primary">Nuevo</a>
+    </p>
+}
+
+<table class="table">
+    @foreach (var entidades in Model.Entidades)
+    {
+        <tr>
+            <td>@entidades.Id</td>
+            <td>@entidades.Nit</td>
+            <td>@entidades.Name</td>
+            <td>@entidades.Direccion</td>
+            <td>@entidades.Telefono</td>
+            <td>@entidades.Ciudad</td>
+            <td>@entidades.Departamento</td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./DetailEntidad" asp-route-entidadId="@entidades.Id">
+                    Detalle</a>
+            </td>
+                       <td>
+                <a class="btn btn-primary table-btn" asp-page="./CrearEntidad" asp-route-entidadId="@entidades.Id">
+                    Editar
+                </a>
+            </td> 
+
+            <td>
+                <a class="btn btn-danger table-btn" asp-page="./DeleteEntidad" asp-route-entidadId="@entidades.Id">
+                    Eliminar
+                </a>
+            </td> 
+        </tr>
+    }
+</table>
