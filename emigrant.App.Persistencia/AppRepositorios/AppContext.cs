@@ -12,6 +12,7 @@ namespace emigrant.App.Persistencia
         public DbSet<ServicioAsignacion> ServicioAsignaciones { get; set; }
         public DbSet<ServicioEnUso> ServicioEnUsos { get; set; }
         public DbSet<AmigoFamiliar> AmigoFamiliars { get; set; }
+        public DbSet<Emergencia> Emergencias { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

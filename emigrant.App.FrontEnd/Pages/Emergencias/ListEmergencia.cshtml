@@ -1,0 +1,57 @@
+@page
+@model emigrant.App.FrontEnd.Pages.ListEmergenciaModel;
+
+@{
+   var BuscarEmergencia = Model.BuscarEmergencia; 
+}
+
+<h1>Listado Solicitudes Emergencia</h1>
+<p>
+    
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Buscar x Nombre: @Html.TextBox("BuscarEmergencia") 
+        <a asp-page="./List" class="btn btn-danger table-btn">X</a>
+        <input class="btn btn-primary table-btn"type="submit" value="Search" />
+        <a asp-page=".\CrearEmergencia" class="btn btn-primary">Nuevo</a>
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Documento</th>
+        <th>Nombre</th>
+        <th>Estado</th>
+        <th>Tipo</th>
+        <th>Opciones</th>
+    </tr>
+    @foreach (var emergencias in Model.Emergencia)
+    {
+        <tr>
+            <td>@emergencias.Id</td>
+            <td>@emergencias.NumeroDocumetoMigrante</td>
+            <td>@emergencias.NombreMigrante</td>
+            <td>@emergencias.TipoEmergencia</td>
+            <td>@emergencias.Estado</td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./DetailEmergencia" asp-route-emergenciaId="@emergencias.Id">
+                    Detalle</a>
+            </td>
+                       <td>
+                <a class="btn btn-primary table-btn" asp-page="./CrearEmergencia" asp-route-emergenciaId="@emergencias.Id">
+                    Editar
+                </a>
+            </td> 
+
+            <td>
+                <a class="btn btn-danger table-btn"  asp-page="./DeleteEmergencia" asp-route-emergenciaId="@emergencias.Id">
+                    Eliminar
+                </a>
+            </td> 
+        </tr>
+    }
+</table>

@@ -41,9 +41,9 @@ namespace emigrant.App.Persistencia
                 return _appContext.EntidadColaboradora;  //select * from EntidadColaboradoras
         }
 
-        EntidadColaboradora IRepositorioEntidadColaboradora.Get(int? idFormador)
+        EntidadColaboradora IRepositorioEntidadColaboradora.Get(int? id)
         {
-            return _appContext.EntidadColaboradora.FirstOrDefault(p => p.Id == idFormador);
+            return _appContext.EntidadColaboradora.FirstOrDefault(p => p.Id == id);
         }
 
         EntidadColaboradora IRepositorioEntidadColaboradora.Update(EntidadColaboradora EntidadColaboradora)
@@ -63,12 +63,12 @@ namespace emigrant.App.Persistencia
             return Search;
         }
 
-        void IRepositorioEntidadColaboradora.Delete(int idFormador)
+        void IRepositorioEntidadColaboradora.Delete(int id)
         {
-            var FormadorEncontrado = _appContext.EntidadColaboradora.FirstOrDefault(p => p.Id == idFormador);
-            if (FormadorEncontrado == null)
+            var Encontrado = _appContext.EntidadColaboradora.FirstOrDefault(p => p.Id == id);
+            if (Encontrado == null)
                 return;
-            _appContext.EntidadColaboradora.Remove(FormadorEncontrado);
+            _appContext.EntidadColaboradora.Remove(Encontrado);
             _appContext.SaveChanges();
         }
     }

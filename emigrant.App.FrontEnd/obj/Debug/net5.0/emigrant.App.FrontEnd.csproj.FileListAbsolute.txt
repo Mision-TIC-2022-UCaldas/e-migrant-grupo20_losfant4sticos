@@ -680,3 +680,7 @@ C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.A
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\ServiciosSolicitud\ListaServiciosSolicitudEntidad.cshtml.g.cs
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Servicios\FormServicios.cshtml.g.cs
 C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Servicios\ListaServiciosEntidad.cshtml.g.cs
+C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Emergencias\CrearEmergencia.cshtml.g.cs
+C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Emergencias\DeleteEmergencia.cshtml.g.cs
+C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Emergencias\DetailEmergencia.cshtml.g.cs
+C:\Users\gdnie\OneDrive\Desktop\Proyectos\HackatonMinTic\emigrant.App\emigrant.App.FrontEnd\obj\Debug\net5.0\Razor\Pages\Emergencias\ListEmergencia.cshtml.g.cs

@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 
 using emigrant.App.Persistencia;
 
-
 namespace emigrant.App.FrontEnd
 {
     public class Startup
@@ -32,9 +31,9 @@ namespace emigrant.App.FrontEnd
             services.AddScoped<IRepositorioEntidadColaboradora, RepositorioEntidadColaboradora>();
             services.AddScoped<IRepositorioServicio, RepositorioServicio>();
             services.AddScoped<IRepositorioServicioSolicitud, RepositorioServicioSolicitud>();
-            services.AddDbContext<AppContextDb>();
             services.AddScoped<IRepositorioMigrante, RepositorioMigrante>();
             services.AddScoped<IRepositorioAmigoFamiliar, RepositorioAmigoFamiliar>();
+            services.AddScoped<IRepositorioEmergencia, RepositorioEmergencia>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
